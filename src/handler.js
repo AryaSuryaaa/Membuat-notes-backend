@@ -80,7 +80,7 @@ const getNoteByIdHandler = (request, h) => {
 }
 
 const editNoteByHandler = (request, h) => {
-  const id = request.params;
+  const { id }  = request.params;
 
   const { title, tags, body } = request.payload;
   const updatedAt = new Date().toISOString();
@@ -96,7 +96,7 @@ const editNoteByHandler = (request, h) => {
       tags,
       body,
       updatedAt
-    }
+    };
 
     const response = h.response ({
       status: 'success',
@@ -104,14 +104,14 @@ const editNoteByHandler = (request, h) => {
     });
     response.code(200);
     return response;
-  } else {
+  } 
     const response = h.response ({
       status: 'fail',
       message: 'Gagal memperbarui catatan. Id tidak ditemukan'
     });
     response.code(404);
     return response;
-  }
+  
 
 
 
