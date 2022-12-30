@@ -186,4 +186,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Personal Notes
+catatan.txt
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,node
